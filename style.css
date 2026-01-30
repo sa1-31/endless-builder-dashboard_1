@@ -1,12 +1,20 @@
+:root {
+  --bg: #0b0b0f;
+  --card: #12121a;
+  --border: #1f1f2e;
+  --green: #4cff8f;
+  --purple: #7b61ff;
+  --text-muted: #999;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
   font-family: Inter, system-ui, sans-serif;
 }
 
 body {
-  background: #0b0b0f;
+  background: var(--bg);
   color: #eaeaea;
 }
 
@@ -15,19 +23,16 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 16px 20px;
-  border-bottom: 1px solid #1f1f2e;
+  border-bottom: 1px solid var(--border);
 }
 
 .logo {
   display: flex;
   gap: 10px;
   align-items: center;
-  font-weight: 600;
 }
 
-.logo img {
-  width: 30px;
-}
+.logo img { width: 30px; }
 
 /* NAV */
 .nav-btn {
@@ -38,14 +43,10 @@ header {
   cursor: pointer;
 }
 
-.nav-btn.active {
-  color: #4cff8f;
-}
+.nav-btn.active { color: var(--green); }
 
 /* PAGE */
-main {
-  padding: 32px 18px;
-}
+main { padding: 32px 18px; }
 
 .page {
   display: none;
@@ -53,73 +54,86 @@ main {
   margin: auto;
 }
 
-.page.active {
-  display: block;
-}
+.page.active { display: block; }
 
 /* HOME */
-#home h1 {
+h1 {
   font-size: 34px;
-  background: linear-gradient(90deg, #7b61ff, #4cff8f);
+  background: linear-gradient(90deg, var(--purple), var(--green));
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .subtitle {
-  margin: 12px 0 28px;
-  color: #aaa;
+  margin: 12px 0 26px;
+  color: var(--text-muted);
 }
 
 /* GRID */
 .grid {
   display: grid;
   gap: 18px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
 
 .card {
-  background: #12121a;
-  border: 1px solid #1f1f2e;
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 22px;
   position: relative;
 }
 
-.card.winner {
-  border-color: #4cff8f;
+.top-builder {
+  border-color: var(--green);
+  box-shadow: 0 0 18px rgba(76,255,143,0.25);
+}
+
+.top-badge {
+  position: absolute;
+  top: -10px;
+  right: 14px;
+  background: var(--green);
+  color: #000;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  font-weight: 600;
 }
 
 .rank {
-  position: absolute;
-  top: 14px;
-  right: 14px;
   font-size: 12px;
-  color: #4cff8f;
+  color: var(--green);
 }
 
 .card h3 {
-  margin-top: 10px;
+  margin: 8px 0 4px;
   font-size: 20px;
 }
 
 .level {
   display: inline-block;
-  margin: 8px 0;
   font-size: 12px;
   padding: 4px 10px;
   border-radius: 20px;
+  margin-bottom: 8px;
 }
 
-.gold { background: #4cff8f; color: #000; }
+.gold { background: var(--green); color: #000; }
 .silver { background: #aaa; color: #000; }
 .bronze { background: #c07c3a; color: #000; }
 
 .card p {
   font-size: 14px;
-  color: #999;
+  color: var(--text-muted);
 }
 
-/* SUBMIT (UNCHANGED) */
+.badges span {
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+/* SUBMIT */
 form {
   display: flex;
   flex-direction: column;
@@ -138,10 +152,9 @@ input {
 }
 
 button {
-  background: linear-gradient(90deg, #7b61ff, #4cff8f);
+  background: linear-gradient(90deg, var(--purple), var(--green));
   border: none;
   font-weight: 600;
-  cursor: pointer;
 }
 
 .note {
@@ -151,10 +164,9 @@ button {
   color: #777;
 }
 
-/* 🔥 DESKTOP FIX – SADECE ÖLÇÜ BALANSI */
+/* 🔧 DESKTOP ONLY FIX */
 @media (min-width: 1024px) {
-  #home h1 { font-size: 28px; }
+  h1 { font-size: 28px; }
   .card { padding: 18px; }
   .card h3 { font-size: 17px; }
-  .card p { font-size: 13px; }
 }
