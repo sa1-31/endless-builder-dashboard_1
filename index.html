@@ -20,52 +20,27 @@
 </header>
 
 <main>
+  <section id="home" class="page active">
+    <h1>Endless Builders Leaderboard</h1>
+    <p class="subtitle">Bi-weekly top contributors</p>
+    <div id="builders" class="grid"></div>
+  </section>
 
-<section id="home" class="page active">
-  <h1>Endless Builders Leaderboard</h1>
-  <p class="subtitle">Top contributors shaping the ecosystem</p>
+  <section id="submit" class="page">
+    <h1>Submit Your Contribution</h1>
+    <p class="subtitle">Share your build with Endless</p>
 
-  <div class="grid">
+    <form id="submitForm">
+      <input type="url" placeholder="GitHub Repository Link" required />
+      <input type="url" placeholder="Twitter / X Post Link" required />
+      <button type="submit">Submit</button>
+    </form>
 
-    <div class="card winner">
-      <div class="rank">🏆 WINNER</div>
-      <h3>Builder Alpha</h3>
-      <span class="level gold">Gold Level</span>
-      <p>Smart contracts · Infra</p>
-    </div>
-
-    <div class="card">
-      <div class="rank">#2</div>
-      <h3>Builder Beta</h3>
-      <span class="level silver">Silver Level</span>
-      <p>Frontend · UX</p>
-    </div>
-
-    <div class="card">
-      <div class="rank">#3</div>
-      <h3>Builder Gamma</h3>
-      <span class="level bronze">Bronze Level</span>
-      <p>Dev tools · SDKs</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="submit" class="page">
-  <h1>Submit Your Build</h1>
-  <p class="subtitle">Share your contribution with Endless</p>
-
-  <form id="submitForm">
-    <input type="url" placeholder="GitHub Repository Link" required />
-    <input type="url" placeholder="Twitter / X Post Link" required />
-    <button type="submit">Submit</button>
-  </form>
-
-  <p class="note">Submissions are reviewed by the community.</p>
-</section>
-
+    <p class="note">Submissions are reviewed bi-weekly.</p>
+  </section>
 </main>
 
+<script src="data.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
