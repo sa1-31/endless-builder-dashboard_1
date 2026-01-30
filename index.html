@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Endless Builders Hub</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
 <header>
   <div class="logo">
-    <img src="endless-logo.png" alt="Endless Logo" />
+    <img src="endless-logo.png" />
     <span>Endless Hub</span>
   </div>
   <nav>
@@ -21,46 +21,48 @@
 
 <main>
 
-  <!-- HOME -->
-  <section id="home" class="page active">
-    <h1>Top Endless Builders</h1>
-    <p class="subtitle">
-      Discover developers shaping the Endless ecosystem
-    </p>
+<section id="home" class="page active">
+  <h1>Endless Builders Leaderboard</h1>
+  <p class="subtitle">Top contributors shaping the ecosystem</p>
 
-    <div class="grid">
-      <div class="card">
-        <h3>Builder Alpha</h3>
-        <p>Smart contracts & infra</p>
-      </div>
-      <div class="card">
-        <h3>Builder Beta</h3>
-        <p>Frontend & UX</p>
-      </div>
-      <div class="card">
-        <h3>Builder Gamma</h3>
-        <p>Dev tools & SDKs</p>
-      </div>
+  <div class="grid">
+
+    <div class="card winner">
+      <div class="rank">🏆 WINNER</div>
+      <h3>Builder Alpha</h3>
+      <span class="level gold">Gold Level</span>
+      <p>Smart contracts · Infra</p>
     </div>
-  </section>
 
-  <!-- SUBMIT -->
-  <section id="submit" class="page">
-    <h1>Submit Your Work</h1>
-    <p class="subtitle">
-      Share your contribution with the Endless community
-    </p>
+    <div class="card">
+      <div class="rank">#2</div>
+      <h3>Builder Beta</h3>
+      <span class="level silver">Silver Level</span>
+      <p>Frontend · UX</p>
+    </div>
 
-    <form id="submitForm">
-      <input type="url" placeholder="GitHub Repository Link" required />
-      <input type="url" placeholder="Twitter / X Post Link" required />
-      <button type="submit">Submit</button>
-    </form>
+    <div class="card">
+      <div class="rank">#3</div>
+      <h3>Builder Gamma</h3>
+      <span class="level bronze">Bronze Level</span>
+      <p>Dev tools · SDKs</p>
+    </div>
 
-    <p class="note">
-      Your submission will be reviewed by the community.
-    </p>
-  </section>
+  </div>
+</section>
+
+<section id="submit" class="page">
+  <h1>Submit Your Build</h1>
+  <p class="subtitle">Share your contribution with Endless</p>
+
+  <form id="submitForm">
+    <input type="url" placeholder="GitHub Repository Link" required />
+    <input type="url" placeholder="Twitter / X Post Link" required />
+    <button type="submit">Submit</button>
+  </form>
+
+  <p class="note">Submissions are reviewed by the community.</p>
+</section>
 
 </main>
 
