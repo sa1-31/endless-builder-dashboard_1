@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  background: #0b0b0f;
+  color: #eaeaea;
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid #1f1f2e;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.logo img {
+  width: 28px;
+  height: 28px;
+}
+
+nav .nav-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  margin-left: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+nav .nav-btn.active {
+  color: #4cff8f;
+}
+
+/* PAGES */
+main {
+  padding: 28px 18px;
+}
+
+.page {
+  display: none;
+  max-width: 900px;
+  margin: auto;
+}
+
+.page.active {
+  display: block;
+}
+
+/* HOME (DOWNSIZED) */
+#home h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #7b61ff, #4cff8f);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 22px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: #12121a;
+  border: 1px solid #1f1f2e;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #9b9b9b;
+}
+
+/* SUBMIT (UNCHANGED – IDEAL) */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #2a2a3d;
+  background: #0f0f16;
+  color: #fff;
+}
+
+button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #7b61ff, #4cff8f);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.note {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (min-width: 900px) {
+  main {
+    padding: 40px 20px;
+  }
+}
