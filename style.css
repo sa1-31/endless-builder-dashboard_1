@@ -170,3 +170,54 @@ button {
   .card { padding: 18px; }
   .card h3 { font-size: 17px; }
 }
+/* BUILDER LEVELS */
+.levels {
+  margin-top: 60px;
+}
+
+.levels h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.levels-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.level-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.level-card h3 {
+  margin-bottom: 8px;
+  color: var(--green);
+}
+
+.level-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.level-card.highlight {
+  border-color: var(--purple);
+  box-shadow: 0 0 20px rgba(123, 97, 255, 0.2);
+}
+
+/* FOOTER */
+footer {
+  margin-top: 70px;
+  padding: 24px 10px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+}
+
+footer span {
+  color: var(--green);
+}
